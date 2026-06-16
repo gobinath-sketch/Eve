@@ -1,0 +1,29 @@
+export enum RegistrationStatus {
+  DRAFT = 'DRAFT',
+  PENDING_PAYMENT = 'PENDING_PAYMENT',
+  PAID = 'PAID',
+  FAILED = 'FAILED',
+  CANCELLED = 'CANCELLED',
+}
+
+export enum PaymentStatus {
+  CREATED = 'CREATED',
+  AUTHORIZED = 'AUTHORIZED',
+  CAPTURED = 'CAPTURED',
+  FAILED = 'FAILED',
+  REFUNDED = 'REFUNDED',
+}
+
+export enum EmailType {
+  REGISTRATION_CONFIRMATION = 'REGISTRATION_CONFIRMATION',
+  PAYMENT_SUCCESS = 'PAYMENT_SUCCESS',
+  EVENT_PASS = 'EVENT_PASS',
+  REMINDER = 'REMINDER',
+  THANK_YOU = 'THANK_YOU',
+}
+
+export enum EmailStatus {
+  PENDING = 'PENDING',
+  SENT = 'SENT',
+  FAILED = 'FAILED',
+}
