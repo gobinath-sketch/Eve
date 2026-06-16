@@ -1,0 +1,20 @@
+{
+  "name": "learnai-event-platform",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:frontend\" \"npm run dev:backend\"",
+    "dev:frontend": "npm --workspace apps/frontend run dev",
+    "dev:backend": "npm --workspace apps/backend run start:dev",
+    "build": "npm --workspace apps/frontend run build && npm --workspace apps/backend run build",
+    "lint": "npm --workspace apps/frontend run lint && npm --workspace apps/backend run lint",
+    "start": "concurrently \"npm --workspace apps/frontend run start\" \"npm --workspace apps/backend run start:prod\""
+  },
+  "workspaces": [
+    "apps/frontend",
+    "apps/backend"
+  ],
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
